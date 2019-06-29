@@ -1,0 +1,64 @@
+page-index {
+    .scroll-content {
+
+        .search-grid {
+            padding: 0;
+            z-index: 9999;
+            // margin-bottom: 40px;
+
+            .row {
+                align-items: center;
+
+                .col {
+                    .searchbar-input-container {
+                        outline: 3px !important;
+                        border: 2px solid rgb(110, 59, 59);
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .slides {
+
+        .swiper-container {
+            .swiper-pagination {
+                bottom: 30px;
+            }
+        }
+    }
+
+    .scroll-x {
+        height: 220px;
+        white-space: nowrap;
+
+        .card {
+            display: inline-block;
+
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                // justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 210px;
+                    height: auto;
+                }
+
+            }
+        }
+    }
+
+    .recommendedList {
+        h4 {
+            padding: 5px 10px;
+            border-bottom: 1px solid #dedede;
+        }
+
+        .item-block {
+            height: 140px;
+        }
+    }
+}
