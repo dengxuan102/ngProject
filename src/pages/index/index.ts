@@ -1,3 +1,4 @@
+import { CartPage } from './../cart/cart';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http'
@@ -21,8 +22,8 @@ export class IndexPage {
   carouselList = [] //轮播图数据
   newArrivalItems = [] //新品上市数据
   recommendedItems = [] //推荐商品
-
   detail = DetailPage
+  cart = CartPage
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private myHttp: HttpClient, private loadingCtrl: LoadingController) {
 
@@ -74,8 +75,8 @@ export class IndexPage {
     }, 500);
   }
 
-  loadingCTrl() {
 
+  loadingCTrl() {
     this.loadingCtrl.create({ duration: 200 }).present();
   }
 

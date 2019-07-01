@@ -12,7 +12,30 @@
 
 </ion-header>
 
-
 <ion-content padding>
+  <div class="img">
+    <ion-img width='100' height='100' src="../../assets/imgs/logo.png"></ion-img>
+  </div>
 
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" floating>用户名</ion-label>
+      <ion-input [(ngModel)]="loginName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>密码</ion-label>
+      <ion-input [(ngModel)]="loginPwd" type="password"></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button ion-button clear>免费注册</button>
+        </ion-col>
+        <ion-col style="text-align: right;">
+          <button ion-button clear>忘记密码</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <button ion-button block color="danger" (click)="doLogin()">登陆</button>
+  </ion-list>
 </ion-content>

@@ -1,3 +1,27 @@
 page-login {
+    .content {
+        .scroll-content {
+            .img {
+                margin: 0 auto;
+            }
 
+            .list {
+                padding: 0;
+
+                .row {
+
+                    .col {
+
+                        .button {
+                            color: #000;
+                        }
+
+                        .button-block {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

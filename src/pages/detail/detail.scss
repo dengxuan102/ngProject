@@ -34,37 +34,18 @@ page-detail {
                         margin-top: 15px;
                         font-size: 20px;
                     }
-
-                    .grid {
-                        padding: 0;
-
-                        .row {
-                            padding: 0;
-                            align-items: center;
-
-                            .icons {
-                                align-items: center;
-                                justify-content: right;
-                                padding: 0;
-
-                                ion-icon {
-                                    margin: 0 8px;
-                                    font-size: 24px;
-                                }
-
-                                .icon-heart {
-                                    margin: 0;
-                                }
-                            }
-
-                            .button {
-                                justify-content: right
-                            }
-                        }
-                    }
                 }
             }
 
+        }
+    }
+
+    .footer {
+        .grid {
+            .row {
+                align-items: center;
+                margin: 0 20px;
+            }
         }
     }
 }

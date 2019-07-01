@@ -59,7 +59,7 @@
       </ion-thumbnail>
       <h2>{{item.title}}</h2>
       <p class="detail">{{item.details}}</p>
-      <ion-icon name="cart" item-end color='primary' small></ion-icon>
+      <ion-icon name="cart" item-end color='primary' small [navPush]="cart" [navParams]="{id:item.pid}"></ion-icon>
     </ion-item>
   </ion-list>
 

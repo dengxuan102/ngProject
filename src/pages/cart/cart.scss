@@ -1,3 +1,32 @@
 page-cart {
+    .header {
+        .toolbar {
+            .toolbar-background {
 
+                border: 0;
+            }
+        }
+    }
+
+    .title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .price {
+        color: #f30213;
+    }
+
+    .count-change {
+        text-align: center;
+
+        .goods-count {
+            border: 0;
+            margin-left: 10px;
+            width: 30px;
+        }
+    }
 }
