@@ -21,11 +21,14 @@ page-cart {
     }
 
     .count-change {
+        display: flex;
         text-align: center;
+        align-items: center;
 
         .goods-count {
             border: 0;
-            margin-left: 10px;
+
+            text-align: center;
             width: 30px;
         }
     }

@@ -24,7 +24,7 @@
   <div *ngIf='cartList.length !==0'>
     <ion-list>
       <ion-item *ngFor="let item of cartList">
-        <ion-checkbox item-start></ion-checkbox>
+        <ion-checkbox item-start [(ngModel)]="item.isSelected" (ngModelChange)="ChangeOne()"></ion-checkbox>
         <ion-thumbnail item-end>
           <ion-grid>
             <ion-row>
@@ -33,11 +33,17 @@
               </ion-col>
               <ion-col>
                 <h4 class="title">{{item.title}}</h4>
-                <p class="price">CN￥{{item.price.toFixed(2)}}</p>
+                <p class="price">{{item.price | currency:'CNY'}}</p>
                 <div class="count-change">
-                  <ion-icon name="remove"></ion-icon>
+                  <!-- <ion-icon name="remove"></ion-icon> -->
+                  <button ion-button icon-only small>
+                    <ion-icon name="remove"></ion-icon>
+                  </button>
                   <input class="goods-count" type="number" [(ngModel)]="item.count">
-                  <ion-icon name="add"></ion-icon>
+                  <!-- <ion-icon name="add"></ion-icon> -->
+                  <button ion-button icon-only small (click)="countAdd(item.count)">
+                    <ion-icon name="add" ></ion-icon>
+                  </button>
                 </div>
               </ion-col>
             </ion-row>
@@ -47,3 +53,15 @@
     </ion-list>
   </div>
 </ion-content>
+<ion-footer>
+  <!-- 存储是全选的复选框和去结算的按钮 -->
+  <ion-grid>
+    <ion-row align-items-center>
+      <ion-col col-2 style="text-align: center">
+        <ion-checkbox [(ngModel)]="isAllSelected" (ngModelChange)="onChange()"></ion-checkbox>
+      </ion-col>
+      <ion-col>全选 本次消费{{calcAll()}}</ion-col>
+      <ion-col><button ion-button block color="danger">去结算</button></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
